@@ -83,6 +83,17 @@ print("Connected to: ", scope.idn)
 print("Currently displayed channels: ", str(scope.displayed_channels))
 ```
 
+In the [DS1000Z Series Programming Guide](http://int.rigol.com/File/TechDoc/20151218/MSO1000Z&DS1000Z_ProgrammingGuide_EN.pdf) you can find a lot of additonal Settings. 
+
+They (for Example Trigger Coupling) can be set with:
+
+```python
+from ds1054z import DS1054Z
+
+scope = DS1054Z('192.168.0.23')
+scope.write('TRIGger:COUPling DC')
+``` 
+
 ## Author
 
 * Philipp Klaus  
